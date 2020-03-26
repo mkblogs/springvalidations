@@ -58,7 +58,7 @@ public class AccountControllerTest {
 	public void testAccountSaveObject() throws Exception {
 		String url = "/api/account";
 		String jsonString = "{" 
-								+ " \"accountName\": \"test\"," 
+								+ " \"accountName\": \"a\"," 
 								+ " \"accountType\": \"Saving\","
 								+ " \"amount\":100.90," 
 								+ " \"createdBy\":1," 
@@ -128,7 +128,7 @@ public class AccountControllerTest {
 	
 	@Test
 	public void testAccountGetObject() throws Exception {
-		String url = "/api/account/1";
+		String url = "/api/account/0";
 		
 
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(url).accept(MediaType.APPLICATION_JSON)

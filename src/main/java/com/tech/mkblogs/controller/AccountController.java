@@ -3,6 +3,7 @@ package com.tech.mkblogs.controller;
 import java.time.LocalTime;
 import java.util.List;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ public class AccountController {
 	private AccountService accountService;
 	
 	@PostMapping("/account")
-	public ResponseEntity<Account> saveAccount(@RequestBody Account account) throws Exception {
+	public ResponseEntity<Account> saveAccount(@RequestBody @Valid Account account) throws Exception {
 		log.info("| Request Time - Start - saveAccount() " + LocalTime.now());
 		account = accountService.saveAccount(account);		
 		log.info("| Request Time - End - saveAccount() " + LocalTime.now());
@@ -41,7 +42,7 @@ public class AccountController {
 	}
 	
 	@PutMapping("/account")
-	public ResponseEntity<Account> updateAccount(@RequestBody Account account) throws Exception {
+	public ResponseEntity<Account> updateAccount(@RequestBody @Valid Account account) throws Exception {
 		log.info("| Request Time - Start - updateAccount() " + LocalTime.now());
 		account = accountService.updateAccount(account);		
 		log.info("| Request Time - End - updateAccount() " + LocalTime.now());
@@ -50,7 +51,7 @@ public class AccountController {
 	
 	@GetMapping("/account/{accountId}")
 	public ResponseEntity<Account> getAccount(@PathVariable("accountId") 
-	@Min(value = 1,message = "{account.id.min}" ) Integer accountId) throws Exception{
+					@Min(value = 1,message = "{account.id.min}" ) @Valid Integer accountId) throws Exception{
 		log.info("| Request Time - Start - getAccount("+accountId+") " + LocalTime.now());
 		Account account = accountService.getAccount(accountId);		
 		log.info("| Request Time - End - getAccount("+accountId+") " + LocalTime.now());
