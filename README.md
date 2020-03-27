@@ -1,7 +1,7 @@
 # Spring Validations
 In this example we have used default validations as well as custom validations 
 
-###Default Validations
+### Default Validations
  -@NotEmpty
  -@Size
  -@NotNull
@@ -23,7 +23,7 @@ In this example we have used default validations as well as custom validations
     @Digits(integer=3, fraction=2,message = "{account.amount.decimal}" )
 	private BigDecimal amount;
  ```
- ###Custom Validation 
+ ### Custom Validation 
  I have created custom validation like `@AlreadyExists`, it will check account name is already exists or not.
  ```java
 	 @AlreadyExists(message = "{alreadyexists.account}")
