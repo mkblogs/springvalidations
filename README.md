@@ -2,12 +2,12 @@
 In this example we have used default validations as well as custom validations 
 
 ### Default Validations
- -@NotEmpty
- -@Size
- -@NotNull
- -@DecimalMin
- -@Digits
- -etc..
+ - @NotEmpty
+ - @Size
+ - @NotNull
+ - @DecimalMin
+ - @Digits
+ - etc..
  
  ```java
     @NotEmpty(message = "{account.name.notempty}")
@@ -24,7 +24,7 @@ In this example we have used default validations as well as custom validations
 	private BigDecimal amount;
  ```
  ### Custom Validation 
- I have created custom validation like `@AlreadyExists`, it will check account name is already exists or not.
+ I have created custom validation like `@AlreadyExists`, it will check account name is already exists or not in database.
  ```java
 	 @AlreadyExists(message = "{alreadyexists.account}")
 	 
