@@ -76,11 +76,9 @@ In this example I have used default validations as well as custom validations
 			if (counter > 0)
 				statusFlag = false;
 			return statusFlag;
-		}
-	 
-	 
+		}	 
 	 }
-````	 
+````
 ### ValidationMessages.properties
 ````properties
 account.name.notempty 	= Account Name is not empty
