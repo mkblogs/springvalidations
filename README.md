@@ -81,5 +81,18 @@ In this example I have used default validations as well as custom validations
 	 
 	 }
 ````	 
+### ValidationMessages.properties
+````properties
+account.name.notempty 	= Account Name is not empty
+account.name.size     	= Account Name accepts at least {min} and at most {max} characters
+account.type.notempty 	= Account Type is not empty
+account.type.size     	= Account Type accepts at least {min} and at most {max} characters
+account.amount.notnull 	= Amount is not empty
+account.amount.min    	= Account Minimum balance should be 100.entered value ${validatedValue}
+account.amount.decimal	= Amount should be in 2 decimal values.entered value ${validatedValue}
+
+alreadyexists.account	= Account name already exists.entered value '${validatedValue.accountName}'
+account.id.min			= Please provide the valid account id, entered value ${validatedValue}
+````
 
 
