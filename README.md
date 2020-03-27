@@ -27,7 +27,9 @@ In this example I have used default validations as well as custom validations
  I have created custom validation like `@AlreadyExists`, it will check account name is already exists or not in database.
  ```java
 	 @AlreadyExists(message = "{alreadyexists.account}")
-	 
+	 public class Account{
+	 ...
+	 }
 	 @Documented
 	 @Retention(RetentionPolicy.RUNTIME)
 	 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE})
