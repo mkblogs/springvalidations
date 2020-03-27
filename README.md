@@ -1,5 +1,5 @@
 # Spring Validations
-In this example we have used default validations as well as custom validations 
+In this example I have used default validations as well as custom validations 
 
 ### Default Validations
  - @NotEmpty
