@@ -41,7 +41,7 @@ public class AlreadyExistsValidator implements ConstraintValidator<AlreadyExists
 	
 	@Override
 	public boolean isValid(Account inputValue, ConstraintValidatorContext context) {
-		log.info("| Request Time - Start - isValid() " + LocalTime.now());
+		log.debug("| Request Time - Start - isValid() " + LocalTime.now());
 		boolean flag = true;
 		if(inputValue.getId() == null) {
 			flag = isValidObjectForSave(inputValue, context);
