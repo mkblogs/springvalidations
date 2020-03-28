@@ -92,7 +92,7 @@ account.amount.min    	= Account Minimum balance should be 100.entered value ${v
 account.amount.decimal	= Amount should be in 2 decimal values.entered value ${validatedValue}
 
 alreadyexists.account	= Account name already exists.entered value '${validatedValue.accountName}'
-account.id.min			= Please provide the valid account id, entered value ${validatedValue}
+account.id.min		= Please provide the valid account id, entered value ${validatedValue}
 ````
 
 
